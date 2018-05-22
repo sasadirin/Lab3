@@ -5,6 +5,7 @@ import Table from "./Table";
 
 import _ from "lodash";
 import { data } from "./table-data.js";
+// https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css
 
 const styles = {
   fontFamily: "sans-serif",
