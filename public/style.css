@@ -1,0 +1,50 @@
+.nay {
+  background-color: gray;
+}
+
+.control-panel {
+  margin: 25px;
+  color: white;
+  font-weight: bold;
+}
+
+.inputy {
+  display: inline-flex;
+  height: 35px;
+}
+
+.icon {
+  color: white;
+}
+
+button {
+  height: 35px;
+}
+
+label {
+  margin: auto;
+  margin-right: 15px;
+  margin-top: 6px;
+}
+
+/* deee styles */
+.subtotal {
+  background-color: #eee;
+}
+.header {
+  background-color: #808080;
+}
+
+.table table-bordered {
+  margin: 7px;
+}
+
+.title {
+  font-size: large;
+  margin-left: 0 !important;
+}
+
+.high {
+  background-color: green;
+  color: white;
+}
