@@ -28,7 +28,7 @@ class Table extends React.Component {
             </thead>
             <tbody>
               <tr className="header">
-                <th scope="row" />
+                <th scope="row"></th>
                 <td>NAMEP</td>
                 <td>PER</td>
                 <td>TOO</td>
