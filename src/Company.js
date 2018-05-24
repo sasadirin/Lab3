@@ -1,6 +1,6 @@
 import React from "react";
 import _ from "lodash";
-
+import 'bootstrap/dist/css/bootstrap.css';
 class Company extends React.PureComponent {
   render() {
     const { namep, per, too, br, svoz, fvd, fms, ren } = this.props;

@@ -29,7 +29,7 @@ class App extends React.Component {
       return;
     }
 
-    let companies = _.concat([], this.state.defaultCompanies);
+    let companies = _.concat([], this.state.companies);
     companies = _.reject(
       companies,
       company => !_.includes(company.per.toLowerCase(), value.toLowerCase())
@@ -38,7 +38,7 @@ class App extends React.Component {
   }
 
   searchByDropdown(value) {
-    let companies = _.concat([], this.state.defaultCompanies);
+    let companies = _.concat([], this.state.companies);
     if (value == "Всі компанії") {
       this.setState({ companies: this.state.defaultCompanies });
       return;
