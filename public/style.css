@@ -48,3 +48,8 @@ label {
   background-color: green;
   color: white;
 }
+.dropdown {
+    display: inline-block;
+    width: 30px;
+    vertical-align: middle;
+}

@@ -1,7 +1,23 @@
 import React from "react";
 import Company from "./Company";
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
 
 class Table extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      option: { value: "середне" , position:"1"}
+    };
+  }
+
+  handleOnExpand(option) {
+    this.props.expand(option.value,option.position);
+    if(option.position=="1"){option.position="0";}
+    else { option.position = "1";}
+  }
+
   render() {
     return (
       <div className="row">
@@ -28,7 +44,17 @@ class Table extends React.Component {
             </thead>
             <tbody>
               <tr className="header">
-                <th scope="row" />
+                <th scope="row">
+                  <button
+                    type="button"
+                    onClick={this.handleOnExpand.bind(this)}
+                  >
+                    <img
+                      src="https://cdn2.iconfinder.com/data/icons/arrows-part-1/32/tiny-arrows-vertical-out-1-128.png"
+                      height="15px"
+                    />
+                  </button>
+                </th>
                 <td>NAMEP</td>
                 <td>PER</td>
                 <td>TOO</td>

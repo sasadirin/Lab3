@@ -50,6 +50,21 @@ class App extends React.Component {
     this.setState({ companies });
   }
 
+  expand_col(value,position){
+    
+    let companies = _.concat([], this.state.companies);
+    if (position=="0") {
+      this.setState({ companies: this.state.defaultCompanies });
+      
+      return;
+    }
+    companies = _.reject(
+      companies,
+      company => !_.includes(company.namep, "середне")
+    );
+    this.setState({ companies });
+  }
+
   searchByValue(value) {
     if (value.length < 3) {
       this.setState({ search: "" });
@@ -61,6 +76,7 @@ class App extends React.Component {
   clearSelection() {
     this.setState({ companies: this.state.defaultCompanies });
   }
+  
 
   render() {
     return (
@@ -70,8 +86,13 @@ class App extends React.Component {
           searchValue={this.searchByValue.bind(this)}
           searchDropdown={this.searchByDropdown.bind(this)}
           clearSelection={this.clearSelection.bind(this)}
+         
         />
-        <Table companies={this.state.companies} search={this.state.search} />
+        <Table 
+         companies={this.state.companies} 
+         search={this.state.search} 
+         expand={this.expand_col.bind(this)}
+        />
       </div>
     );
   }

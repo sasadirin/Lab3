@@ -51,8 +51,8 @@ class Navbar extends React.PureComponent {
             Контрольна панель
           </div>
         </div>
-
         <div className="row">
+          <label htmlFor="search">Компанія:</label>
           <Dropdown
             className="dropdown col-md-3"
             onChange={this.handleDropdown.bind(this)}
